@@ -12,7 +12,7 @@ const SignInScreen = ({navigation}) => {
     <Container>
       <Main>
         <Text title semi center>
-          Sign In
+          Welcome Back
         </Text>
       </Main>
       <Auth>
@@ -23,7 +23,7 @@ const SignInScreen = ({navigation}) => {
             autoCompleteType="email"
             autoCorrect={false}
             keyboardType="email-address"
-            onChangeText={(text) => setEmail(text.trim())}
+            onChangeText={(email) => setEmail(email.trim())}
             value={email}
           />
         </AuthContainer>
@@ -35,7 +35,7 @@ const SignInScreen = ({navigation}) => {
             autoCompleteType="password"
             autoCorrect={false}
             secureTextEntry={true}
-            onChangeText={(text) => setPassword(text.trim())}
+            onChangeText={(password) => setPassword(password.trim())}
             value={password}
           />
         </AuthContainer>
@@ -51,7 +51,7 @@ const SignInScreen = ({navigation}) => {
         )}
       </SignInContainer>
 
-      <SignUp>
+      <SignUp onPress={() => navigation.navigate('SignUp')}>
         <Text small center>
           Create new account?{' '}
           <Text bold color="#8022d9">
@@ -124,7 +124,7 @@ const HeaderGraphic = styled.View`
 `;
 
 const RightCircle = styled.View`
-  background-color: #f5f4b0;
+  background-color: #8022d9;
   position: absolute;
   width: 400px;
   height: 400px;
@@ -134,7 +134,7 @@ const RightCircle = styled.View`
 `;
 
 const LeftCircle = styled.View`
-  background-color: #b0e6f5;
+  background-color: #23a6d5;
   position: absolute;
   width: 200px;
   height: 200px;

@@ -12,7 +12,7 @@ const SignInScreen = ({navigation}) => {
     <Container>
       <Main>
         <Text title semi center>
-          Welcome Back
+          Sign In
         </Text>
       </Main>
       <Auth>
@@ -23,7 +23,7 @@ const SignInScreen = ({navigation}) => {
             autoCompleteType="email"
             autoCorrect={false}
             keyboardType="email-address"
-            onChangeText={(email) => setEmail(email.trim())}
+            onChangeText={(text) => setEmail(text.trim())}
             value={email}
           />
         </AuthContainer>
@@ -35,7 +35,7 @@ const SignInScreen = ({navigation}) => {
             autoCompleteType="password"
             autoCorrect={false}
             secureTextEntry={true}
-            onChangeText={(password) => setPassword(password.trim())}
+            onChangeText={(text) => setPassword(text.trim())}
             value={password}
           />
         </AuthContainer>
@@ -124,7 +124,7 @@ const HeaderGraphic = styled.View`
 `;
 
 const RightCircle = styled.View`
-  background-color: #8022d9;
+  background-color: #f5f4b0;
   position: absolute;
   width: 400px;
   height: 400px;
@@ -134,7 +134,7 @@ const RightCircle = styled.View`
 `;
 
 const LeftCircle = styled.View`
-  background-color: #23a6d5;
+  background-color: #b0e6f5;
   position: absolute;
   width: 200px;
   height: 200px;

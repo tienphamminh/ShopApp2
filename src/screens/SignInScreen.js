@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Text from '../components/Text';
 
+
 const SignInScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -41,7 +42,7 @@ const SignInScreen = ({navigation}) => {
         </AuthContainer>
       </Auth>
 
-      <SignInContainer disabled={loading}>
+      <SignInContainer disabled={loading} onPress={() => navigation.navigate('Main')}>
         {loading ? (
           <Loading />
         ) : (

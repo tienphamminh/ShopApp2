@@ -1,17 +1,18 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import SignInScreen from '../screens/SignInScreen';
-import SignUpScreen from '../screens/SignUpScreen';
+import AuthStackScreens from './AuthStackSreens';
+import MainStackScreens from './MainStackScreens';
 
-const AuthStackScreens = () => {
-  const AuthStack = createStackNavigator();
+const AppStackScreens = () => {
+  const AppStack = createStackNavigator();
+
   return (
-    <AuthStack.Navigator headerMode="none">
-      <AuthStack.Screen name="SignIn" component={SignInScreen} />
-      <AuthStack.Screen name="SignUp" component={SignUpScreen} />
-    </AuthStack.Navigator>
+    <AppStack.Navigator headerMode="none">
+      <AppStack.Screen name="Auth" component={AuthStackScreens} />
+      <AppStack.Screen name="Main" component={MainStackScreens} />
+    </AppStack.Navigator>
   );
 };
 
-export default AuthStackScreens;
+export default AppStackScreens;
